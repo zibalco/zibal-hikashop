@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.0.0" method="upgrade" group="hikashoppayment">
+	<name>Hikashop Zibal Payment Gateway implemented by zibal</name>
+	<version>1.0</version>
+	<creationDate>2022/01/22</creationDate>
+	<author>Zibal Team</author>
+	<authorUrl>https://github.com/zibalco/</authorUrl>
+	<copyright>Copyright (c) 2016 zibal.ir Iran Ltd. All rights reserved.</copyright>
+	<license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+	<description>HIKASHOP_ZIBAL_DESCRIPTION</description>
+	<languages folder="language">
+
+	<language tag="en-GB">en-GB/en-GB.plg_hikashoppayment_zibal.ini</language>
+	<language tag="en-GB">en-GB/en-GB.plg_hikashoppayment_zibal.sys.ini</language>
+
+	<language tag="fa-IR">fa-IR/fa-IR.plg_hikashoppayment_zibal.ini</language>
+	<language tag="fa-IR">fa-IR/fa-IR.plg_hikashoppayment_zibal.sys.ini</language>
+	</languages>
+
+
+	<files>
+		<filename>index.html</filename>
+		<filename plugin="zibal">zibal.php</filename>
+		<filename>zibal_configuration.php</filename>
+		<filename>zibal_end.php</filename>
+		<folder>language</folder>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field
+                        id="pluginoptions"
+                        name="pluginoptions"
+                        type="pluginoptions"
+                        label="hikashop"
+                        description="HikaShop options"
+                />
+            </fieldset>
+		</fields>
+	</config>
+</extension>
